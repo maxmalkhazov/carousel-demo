@@ -30,22 +30,28 @@ for (let i = 0; i < images.length; i++) {
 	})
 }
 
-next.addEventListener('click', () => {
-	counter++;
-	if (counter >= images.length) {
-		counter = 0;
-	}
-	
-	switching();
-});
+next.addEventListener('click', showNext);
 
-prev.addEventListener('click', () => {
+prev.addEventListener('click', showPrev);
+
+function showPrev() {
 	counter--;
 	if (counter < 0) {
 		counter = images.length - 1;
 	}
 	
 	switching();
-});
+}
+
+function showNext() {
+	counter++;
+	if (counter >= images.length) {
+		counter = 0;
+	}
+	
+	switching();
+}
 
 switching();
+
+setInterval(showNext, 5000);
