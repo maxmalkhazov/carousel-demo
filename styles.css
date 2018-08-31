@@ -1,0 +1,80 @@
+.image-carousel {
+	width: 45rem;
+	height: 30rem;
+	overflow: hidden;
+	position: relative;
+	
+}
+
+.inner-image {
+	width: 45rem;
+	height: 30rem;
+}
+
+.inner {
+	display: flex;
+	position: absolute;
+	left: 0;
+	transition: left 0.25s ease-out;
+	
+}
+
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	border-style: solid;
+	opacity: .75;
+	transition: all .4s linear;
+}
+
+.prev:hover, .next:hover {
+	opacity: 1;
+}
+
+.prev {
+	border-width: 20px 30px 20px 0;
+	border-color: transparent #fff transparent transparent;
+	left: 0;
+	transform: translateY(-45%);
+	margin-left: 20px;
+}
+
+.next {
+	border-width: 20px 0 20px 30px;
+	border-color: transparent transparent transparent #fff;
+	right: 0;
+	transform: translateY(-45%);
+	margin-right: 20px;
+}
+
+.bubbles {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-bottom: 5px;
+}
+
+.bubble {
+	margin: 3px;
+	background-color: #fff;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	opacity: .50;
+	transition: opacity: .1s linear;
+	cursor: pointer;
+}
+
+.bubble:hover {
+	opacity: .7;
+}
+
+.active {
+	opacity: 1;
+}
+
